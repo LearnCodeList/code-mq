@@ -1,2 +1,0 @@
-# code-mq
-mq-topic
