@@ -26,7 +26,7 @@ public class PushConsumerB {
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("group1");
         consumer.subscribe("TopicTest", "TagB");
-        consumer.setNamesrvAddr("192.168.114.155:9876");
+        consumer.setNamesrvAddr("192.168.112.140:9876");
         //每次从最后一次消费的地址
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
         consumer.registerMessageListener(new MessageListenerConcurrently() {

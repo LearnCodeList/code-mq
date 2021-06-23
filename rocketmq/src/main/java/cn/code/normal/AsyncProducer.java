@@ -25,7 +25,7 @@ public class AsyncProducer {
         //生产者实例化
         DefaultMQProducer producer = new DefaultMQProducer("async");
         //指定rocket服务器地址
-        producer.setNamesrvAddr("192.168.114.155:9876");
+        producer.setNamesrvAddr("192.168.112.140:9876");
         //启动实例
         producer.start();
         //发送异步失败时的重试次数(这里不重试)

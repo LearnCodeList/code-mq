@@ -20,7 +20,7 @@ public class OnewyProducer {
         //生产者实例化
         DefaultMQProducer producer = new DefaultMQProducer("oneway");
         //指定rocket服务地址
-        producer.setNamesrvAddr("192.168.114.155:9876");
+        producer.setNamesrvAddr("192.168.112.140:9876");
         //启动实例
         producer.start();
         for (int i = 0; i < 10; i++) {

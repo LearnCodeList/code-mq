@@ -25,7 +25,7 @@ public class PullConsumer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQPullConsumer consumer = new DefaultMQPullConsumer("pullconsumer");
-        consumer.setNamesrvAddr("192.168.114.155:9876");
+        consumer.setNamesrvAddr("192.168.112.140:9876");
         consumer.start();
 
         //1.获取MessageQueues并遍历（一个Topic包括多个MessageQueue）
