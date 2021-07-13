@@ -1,7 +1,6 @@
 package cn.code.normal;
 
-import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
-import org.apache.rocketmq.client.exception.MQClientException;
+import cn.code.constant.ConfigConstant;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
@@ -24,7 +23,7 @@ public class SyncProducer {
         //生产者实例化
         DefaultMQProducer producer = new DefaultMQProducer("sync");
         //指定rocket服务地址
-        producer.setNamesrvAddr("192.168.112.140:9876");
+        producer.setNamesrvAddr(ConfigConstant.RQ_NAMESRV_ADDR);
         //启动实例
         producer.start();
 

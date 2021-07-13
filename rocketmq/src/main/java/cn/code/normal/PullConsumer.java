@@ -1,5 +1,6 @@
 package cn.code.normal;
 
+import cn.code.constant.ConfigConstant;
 import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.consumer.PullResult;
 import org.apache.rocketmq.client.exception.MQClientException;
@@ -25,7 +26,7 @@ public class PullConsumer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQPullConsumer consumer = new DefaultMQPullConsumer("pullconsumer");
-        consumer.setNamesrvAddr("192.168.112.140:9876");
+        consumer.setNamesrvAddr(ConfigConstant.RQ_NAMESRV_ADDR);
         consumer.start();
 
         //1.获取MessageQueues并遍历（一个Topic包括多个MessageQueue）

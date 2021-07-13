@@ -1,5 +1,6 @@
 package cn.code.normal;
 
+import cn.code.constant.ConfigConstant;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
@@ -25,7 +26,7 @@ public class AsyncProducer {
         //生产者实例化
         DefaultMQProducer producer = new DefaultMQProducer("async");
         //指定rocket服务器地址
-        producer.setNamesrvAddr("192.168.112.140:9876");
+        producer.setNamesrvAddr(ConfigConstant.RQ_NAMESRV_ADDR);
         //启动实例
         producer.start();
         //发送异步失败时的重试次数(这里不重试)
