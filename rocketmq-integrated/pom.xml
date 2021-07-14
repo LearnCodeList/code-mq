@@ -15,5 +15,6 @@
     <modules>
         <module>spring</module>
         <module>springboot</module>
+        <module>delay-order</module>
     </modules>
 </project>
